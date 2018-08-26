@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <title>CSS Master Series</title>
+  <style>
+      *{
+          margin: 0px;
+          padding: 0px;
+      }
+      .dvt{
+          background-color: crimson;
+      }
+      .dvt ul{
+          list-style-type: none;
+      }
+      .dvt a{
+          display: block;
+          padding: 20px;
+          color: #fff;
+          font-size: 1.1em;
+          text-decoration: none;
+          transition: background-color 0.3s;
+      }
+      #header {
+        position: relative;
+      }
+      header a:hover{
+          background-color: rgba(0,0,0,.1);
+      }
+      .navbar-main{
+          width: 70%;
+          margin: auto;
+          text-align: right;
+      }
+      .navbar-main li{
+          display: inline-block;
+
+      }
+      .navbar-second{
+          width: 420px;
+          background-color: crimson;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          transform: translateX(-420px);
+          transition: transform 0.3s cubic-bezier(.94,.06,.78,.74);
+          min-height: 100vh;
+          box-shadow: 2px 0px 10px rgba(0,0,0,.1);
+      }
+      .navbar-second .nav-toggle{
+          min-height: 50px;
+          width: 50px;
+          position: absolute;
+          top: 5px;
+          right: -55px;
+          background-color: rgba(0,0,0,.1);
+          cursor: pointer;
+          transition: transform 0.3s ;
+      }
+      .nav-toggle span{
+          display: block;
+          height: 3px;
+          width: 70%;
+          margin: auto;
+          background-color: #fff;
+          position: relative;
+          top: 23px;
+      }
+      .nav-toggle span:before{
+          content: '';
+          height: 3px;
+          width: 100%;
+          background-color: #fff;
+          position: absolute;
+          top: -10px;
+      }
+      .nav-toggle span:after{
+          content: '';
+          height: 3px;
+          width: 100%;
+          background-color: #fff;
+          position: absolute;
+          top: 10px;
+      }
+
+
+
+/*        show the second navbar*/
+      header.open .navbar-second{
+          transform: translateX(0);
+      }
+      header.open .nav-toggle{
+          transform: scale(0.8);
+      }
+
+
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="display-3 text-center my-4">CSS 2D Transformations</h1>
+    <h2 class="display-4 text-center">Navbar Toggle</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="dropdown">
+            <button class="btn btn-primary btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+              2: Transitions
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="index.html">Gradient</a>
+              <a class="dropdown-item" href="fading.html">Fading</a>
+              <a class="dropdown-item" href="hover.html">Hovering</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="dropdown">
+            <button class="btn btn-success btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+              2D Transformations
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="transform.html">Image Transform</a>
+              <a class="dropdown-item" href="skew.html">Skewing</a>
+              <a class="dropdown-item" href="slide.html">Sliding</a>
+              <a class="dropdown-item" href="nav-toggle.html">Navbar Toggle</a>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="dropdown">
+            <button class="btn btn-warning btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+              3D Transformations
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="4_2_grid_system.html">4.2 Grid System</a>
+              <a class="dropdown-item" href="4_3_grid_alignment.html">4.3 Grid Alignment</a>
+              <a class="dropdown-item" href="4_4_flexbox.html">4.4 Flexbox</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </header>
+
+  <div class="dvt">
+    <header class="" id="header">
+        <div class="navbar-main">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-second">
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="">Category 1</a></li>
+                <li><a href="">Category 2</a></li>
+                <li><a href="">Category 3</a></li>
+            </ul>
+        </div>
+    </header>
+  </div>
+
+
+  <div style="margin-top:500px;"></div>
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
