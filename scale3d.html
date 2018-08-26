@@ -7,31 +7,37 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <title>CSS Master Series</title>
   <style>
-      *{
-          margin: 0px;
-          padding: 0px;
-      }
-          .container{
-            perspective: 800px;
-        }
-        .box{
-            height: 300px;
-            width: 70%;
-            margin: 50px auto;
-            background-image: url('anthony-delanoix-28851.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            border: 5px solid #fff;
-            transition: transform 0.3s;
-            
-        }
-        .box:hover{
-            transform: scale3d(1.2, 0.5, 1);
-        }
-        
+  *{
+      margin: 0px;
+      padding: 0px;
+  }
+  .spacer {
+    height: 250px;
+    width: 100%;
+    background-color: rgb(135, 219, 201);
+    text-align: center;
+
+  }
+  .container{
+    perspective: 800px;
+}
+.box{
+    height: 300px;
+    width: 70%;
+    margin: 50px auto;
+    background-image: url('anthony-delanoix-28851.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 5px solid #fff;
+    transition: transform 0.3s;
+
+}
+.box:hover{
+    transform: scale3d(1.2, 0.5, 1);
+}
 
   </style>
 </head>
@@ -39,10 +45,10 @@
 <body>
   <header>
     <h1 class="display-3 text-center my-4">CSS 2D Transformations</h1>
-    <h2 class="display-4 text-center">Navbar Toggle</h2>
+    <h2 class="display-4 text-center">Scaling</h2>
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-3">
           <div class="dropdown">
             <button class="btn btn-primary btn-block dropdown-toggle" type="button" data-toggle="dropdown">
               2: Transitions
@@ -54,7 +60,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <div class="dropdown">
             <button class="btn btn-success btn-block dropdown-toggle" type="button" data-toggle="dropdown">
               2D Transformations
@@ -68,14 +74,14 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <div class="dropdown">
             <button class="btn btn-warning btn-block dropdown-toggle" type="button" data-toggle="dropdown">
               3D Transformations
             </button>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="rotate3d.html">Rotate 3D</a>
-         
+
               <a class="dropdown-item" href="backface.html">Backface Visibility</a>
               <a class="dropdown-item" href="translate3d.html">Translate 3D</a>
               <a class="dropdown-item" href="scale3d.html">Scale 3D</a>
@@ -83,25 +89,46 @@
             </div>
           </div>
         </div>
+        <div class="col-md-3">
+          <div class="dropdown">
+            <button class="btn btn-danger btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+              Animations
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="animate.html">Introduction</a>
+
+              <a class="dropdown-item" href="keyframes.html">Keyframe</a>
+              <a class="dropdown-item" href="delay.html">Delay</a>
+              <a class="dropdown-item" href="direction.html">Direction</a>
+              <a class="dropdown-item" href="play_state.html">Play State</a>
+              <a class="dropdown-item" href="fill_mode.html">Fill Mode</a>
+              <a class="dropdown-item" href="chaining.html">Chaining</a>
+              <a class="dropdown-item" href="shorthand.html">Shorthand</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <hr>
   </header>
-    <div class="container">
-        <div class="box">
-            <div class="front">
-                
-            </div>
-            <div class="back">
-                
-            </div>
-        </div>
-    </div>
 
+  <div class="spacer">
+    <h2>Spacer for dropdowns</h2>
+    <p>box perspective covers dropdowns</p>
+  </div>
+  <div class="container">
+      <div class="box">
+          <div class="front">
 
+          </div>
+          <div class="back">
+
+          </div>
+      </div>
+  </div>
 
   <div style="margin-top:500px;"></div>
-  <script src="script.js"></script>
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
